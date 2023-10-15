@@ -1,3 +1,5 @@
 <slot />
 
-<style src="./reset.css"></style>
+<style>
+	@import './reset.css';
+</style>
