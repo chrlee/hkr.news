@@ -30,5 +30,8 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
 }
