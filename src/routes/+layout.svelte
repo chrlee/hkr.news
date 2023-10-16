@@ -1,7 +1,7 @@
 <script>
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
-  import Navbar from './navbar.svelte';
+  import Navbar from '../components/Navbar.svelte';
   inject({ mode: dev ? 'development' : 'production' });
 </script>
 
@@ -20,6 +20,13 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: 1%;
+		padding: 2%;
+		gap: 1rem;
+		@media only screen and (min-width: 1024px) {
+            flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 2rem;
+        }
 	}
 </style>

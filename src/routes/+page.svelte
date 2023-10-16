@@ -1,32 +1,34 @@
 <script>
-	export let data;
+	import { PUBLIC_HOSTED_URL } from '$env/static/public';
+	import { PageTypes, homePageQuery } from '$lib';
+	import Post from '../components/Post.svelte';
+
+	const data = fetch(PUBLIC_HOSTED_URL + homePageQuery)
+		.then((res) => res.json())
+		.then((out) => out.data);	
 </script>
 
-{#each Object.entries(data) as [key, items]}
+{#each Object.values(PageTypes) as pageType}
 	<section class="pageSection">
-		<h2>{key}</h2>
-		{#each items.edges as { node }}
-			<p class="score">{node.score}</p>
-			<div>
-				<a class="submissionLink" href={node.url} target="_blank">{node.title}</a>
-			</div>
-		{/each}
+		<h2>{pageType}</h2>
+			{#await data}
+				<p class="loading">Getting the news...</p>
+			{:then response}
+				{#each response[pageType].edges as { node }}
+					<Post node={node} />
+				{/each}
+			{/await}
 	</section>
 {/each}
 
 <style>
 	.pageSection {
-		display: grid;
-		grid-template-columns: 2rem auto;
+		display: flex;
+		flex-direction: column;
 		gap: 0.5rem;
-        padding: 0.5rem;
 	}
 
-	.pageSection h2:first-child {
+	.pageSection > h2:first-child, .loading {
 		grid-column: 1 / span 2;
-	}
-	
-	.submissionLink {
-		text-decoration: none;
 	}
 </style>
