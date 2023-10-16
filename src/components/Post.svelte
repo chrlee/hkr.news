@@ -5,7 +5,7 @@
 
 <div class="item">
     <div>
-        <a class="itemLink" href={node.url} target="_blank">{node.title}</a>
+        <a class="itemLink" href={node.url} target="_blank" rel="external nofollow">{node.title}</a>
     </div>
     <div class="itemInfo">
         <p><Icon icon="ic:baseline-plus" inline/> {node.score}</p>

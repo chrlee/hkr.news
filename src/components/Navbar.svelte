@@ -16,9 +16,13 @@
 
 <style>
     nav {
+        position: sticky;
+        top: 2%;
         display: flex;
         width: 100%;
+        height: auto;
         justify-content: space-between;
+        align-self: flex-start;
         @media only screen and (min-width: 1024px) {
             flex-direction: column;
             width: initial;

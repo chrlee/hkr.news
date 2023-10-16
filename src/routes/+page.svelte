@@ -8,20 +8,27 @@
 		.then((out) => out.data);	
 </script>
 
-{#each Object.values(PageTypes) as pageType}
-	<section class="pageSection">
-		<h2>{pageType}</h2>
-			{#await data}
-				<p class="loading">Getting the news...</p>
-			{:then response}
-				{#each response[pageType].edges as { node }}
-					<Post node={node} />
-				{/each}
-			{/await}
-	</section>
-{/each}
+<div class="homePage">
+	{#each Object.values(PageTypes) as pageType}
+		<section class="pageSection">
+			<h2>{pageType}</h2>
+				{#await data}
+					<p class="loading">Getting the news...</p>
+				{:then response}
+					{#each response[pageType].edges as { node }}
+						<Post node={node} />
+					{/each}
+				{/await}
+		</section>
+	{/each}
+</div>
 
 <style>
+	.homePage {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 	.pageSection {
 		display: flex;
 		flex-direction: column;
