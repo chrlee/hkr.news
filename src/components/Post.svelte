@@ -8,8 +8,10 @@
         <a class="itemLink" href={node.url} target="_blank" rel="external nofollow">{node.title}</a>
     </div>
     <div class="itemInfo">
-        <p><Icon icon="ic:baseline-plus" inline/> {node.score}</p>
-        <p><Icon icon="pixelarticons:comment" inline/> {node.descendants}</p>
+        <p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>
+        <p><Icon icon="pixelarticons:comment" inline /> {node.descendants}</p>
+        <p><Icon icon="memory:user" inline /> {node.by}</p>
+        <p>{new Date(node.time * 1000)}</p>
     </div>
 </div>
 
@@ -19,9 +21,14 @@
         flex-direction: column;
         min-height: max-content;
         min-width: 100%;
+        padding: 0.3rem;
 	}
+    .item:hover{
+        background-color: antiquewhite;
+    }
 	.itemLink {
 		text-decoration: none;
+        font-size: large;
 	}
 
 	.itemInfo {

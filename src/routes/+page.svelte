@@ -11,7 +11,7 @@
 <div class="homePage">
 	{#each Object.values(PageTypes) as pageType}
 		<section class="pageSection">
-			<h2>{pageType}</h2>
+			<h2 class="pageSectionHeader">{pageType}</h2>
 				{#await data}
 					<p class="loading">Getting the news...</p>
 				{:then response}
@@ -32,10 +32,13 @@
 	.pageSection {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
 	}
 
 	.pageSection > h2:first-child, .loading {
 		grid-column: 1 / span 2;
+	}
+
+	.pageSectionHeader {
+		padding: 0.3rem;
 	}
 </style>

@@ -17,7 +17,7 @@
 <style>
     nav {
         position: sticky;
-        top: 2%;
+        top: 1.5rem;
         display: flex;
         width: 100%;
         height: auto;
@@ -26,6 +26,7 @@
         @media only screen and (min-width: 1024px) {
             flex-direction: column;
             width: initial;
+            top: 1.3rem;
         }
     }
 

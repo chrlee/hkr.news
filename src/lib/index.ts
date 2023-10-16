@@ -17,6 +17,8 @@ export const homePageQuery = `query {
                     url
                     score
                     descendants
+                    by
+                    time
                 }
             }
         },`

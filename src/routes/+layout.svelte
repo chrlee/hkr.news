@@ -20,13 +20,14 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: 2%;
+		padding: 1.5rem;
 		gap: 1rem;
 		@media only screen and (min-width: 1024px) {
             flex-direction: row;
 			justify-content: center;
 			align-items: flex-start;
 			gap: 2rem;
+			padding: 1rem;
         }
 	}
 </style>
