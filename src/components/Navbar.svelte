@@ -11,7 +11,7 @@
         <Icon icon="line-md:close-to-menu-transition" inline={true} width="1.5em" height="1.5em" />
     </div>
     <h1>hkr.news</h1>
-    <div />
+    <div class="filler" />
 </nav>
 
 <style>
@@ -21,6 +21,7 @@
         display: flex;
         width: 100%;
         height: auto;
+        padding: 0 1rem;
         justify-content: space-between;
         align-self: flex-start;
         @media only screen and (min-width: 1024px) {
@@ -34,5 +35,9 @@
        @media only screen and (min-width: 1024px) {
             display: none;
         } 
+    }
+
+    .filler {
+        width: 1.5em;
     }
 </style>

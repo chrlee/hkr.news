@@ -1,6 +1,7 @@
 <script>
     import Icon from "@iconify/svelte";
     export let node;
+    const date = new Date(node.time * 1000);
 </script>
 
 <div class="item">
@@ -11,7 +12,7 @@
         <p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>
         <p><Icon icon="pixelarticons:comment" inline /> {node.descendants}</p>
         <p><Icon icon="memory:user" inline /> {node.by}</p>
-        <p>{new Date(node.time * 1000)}</p>
+        <p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
     </div>
 </div>
 

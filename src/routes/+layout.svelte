@@ -20,7 +20,6 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: 1.5rem;
 		gap: 1rem;
 		@media only screen and (min-width: 1024px) {
             flex-direction: row;
@@ -29,5 +28,9 @@
 			gap: 2rem;
 			padding: 1rem;
         }
+	}
+	
+	.pageContent {
+		padding: 1rem;
 	}
 </style>
