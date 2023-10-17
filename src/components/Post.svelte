@@ -6,11 +6,15 @@
 
 <div class="item">
 	<div>
-		<a class="itemLink" href={node.url} target="_blank" rel="external nofollow">{node.title}</a>
+		<a class="itemLink" href={node.url} target="_blank" rel="external nofollow noreferrer"
+			>{node.title}</a
+		>
 	</div>
 	<div class="itemInfo">
 		<p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>
-		<p><Icon icon="pixelarticons:comment" inline /> {node.descendants}</p>
+		<a href={`posts/${node.id}`} rel="noindex"
+			><Icon icon="pixelarticons:comment" inline /> {node.descendants}</a
+		>
 		<p><Icon icon="memory:user" inline /> {node.by}</p>
 		<p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
 	</div>

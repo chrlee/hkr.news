@@ -15,6 +15,7 @@ export const pageQuery = (pageType: [string, PageTypes][], first: number) => `qu
             edges {
                 cursor
                 node {
+                    id
                     title
                     url
                     score
@@ -25,6 +26,18 @@ export const pageQuery = (pageType: [string, PageTypes][], first: number) => `qu
             }
         }`;
 		})}
+}`;
+
+export const itemQuery = (id: number) => `query {
+        item(id: ${id}){
+            id
+            deleted
+            children {
+                text
+            }
+            url
+            score
+        }
 }`;
 
 export const fetchData = (query: string) =>

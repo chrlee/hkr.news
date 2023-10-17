@@ -4,8 +4,6 @@
 
 	export let data;
 
-	console.log(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]]));
-
 	const query = fetchData(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]], 40));
 </script>
 
