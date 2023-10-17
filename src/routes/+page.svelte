@@ -17,7 +17,9 @@
 				<p class="loading">Getting the news...</p>
 			{:then response}
 				{#each response[pageType].edges as { node }}
-					<Post {node} />
+					{#if node}
+						<Post {node} />
+					{/if}
 				{/each}
 			{/await}
 		</section>

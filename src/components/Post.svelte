@@ -1,7 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
 	export let node;
-	const date = new Date(node.time * 1000);
+	const date = new Date(parseInt(node.time) * 1000);
 </script>
 
 <div class="item">
@@ -16,7 +16,9 @@
 			><Icon icon="pixelarticons:comment" inline /> {node.descendants}</a
 		>
 		<p><Icon icon="memory:user" inline /> {node.by}</p>
-		<p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
+		{#if date}
+            <p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
+        {/if}
 	</div>
 </div>
 

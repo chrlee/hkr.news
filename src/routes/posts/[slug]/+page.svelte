@@ -21,7 +21,7 @@
 
 <style>
     .commentSection {
-        padding: 1rem;
+        padding: 0.3rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
