@@ -1,8 +1,8 @@
 <script>
-  import { dev } from '$app/environment';
-  import { inject } from '@vercel/analytics';
-  import Navbar from '../components/Navbar.svelte';
-  inject({ mode: dev ? 'development' : 'production' });
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+	import Navbar from '../components/Navbar.svelte';
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="pageWrapper">
@@ -22,15 +22,11 @@
 		width: 100%;
 		gap: 1rem;
 		@media only screen and (min-width: 1024px) {
-            flex-direction: row;
+			flex-direction: row;
 			justify-content: center;
 			align-items: flex-start;
 			gap: 2rem;
 			padding: 1rem;
-        }
-	}
-	
-	.pageContent {
-		padding: 1rem;
+		}
 	}
 </style>
