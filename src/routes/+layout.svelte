@@ -29,4 +29,9 @@
 			padding: 1rem;
 		}
 	}
+
+	.pageContent{
+		width: 100%;
+		overflow: hidden;
+	}
 </style>

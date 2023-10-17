@@ -1,6 +1,6 @@
 <script>
 	import { fetchData, itemQuery } from '$lib';
-	import sanitize from 'sanitize-html';
+    import sanitizeHtml from 'sanitize-html';
 
 	export let data;
 
@@ -10,7 +10,20 @@
 {#await query}
 	<p>Getting comments...</p>
 {:then response}
-	{#each response.item.children as { text }}
-		{@html sanitize(text)}
-	{/each}
+    <section class="commentSection">
+        {#each response.item.children as { text }}
+            <div class="comment">
+                {@html sanitizeHtml(text)}
+            </div>
+        {/each}
+    </section>
 {/await}
+
+<style>
+    .commentSection {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>
