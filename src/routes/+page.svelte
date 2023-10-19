@@ -5,6 +5,10 @@
 	const query = fetchData(pageQuery(Object.entries(PageTypes), 5));
 </script>
 
+<svelte:head>
+	<title>hkr.news</title>
+</svelte:head>
+
 <div class="homePage">
 	{#each Object.values(PageTypes) as pageType}
 		<section class="pageSection">
@@ -42,7 +46,7 @@
 	.pageSection {
 		display: flex;
 		flex-direction: column;
-		min-height: 20rem;
+		min-height: 21rem;
 	}
 
 	.pageSection > h2:first-child,

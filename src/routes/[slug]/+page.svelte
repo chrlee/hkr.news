@@ -10,6 +10,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>hkr.news | {data.props.slug}</title>
+</svelte:head>
+
 {#await query}
 	<p>Getting the news...</p>
 {:then response}

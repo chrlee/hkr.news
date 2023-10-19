@@ -8,6 +8,12 @@
 	const query = fetchData(itemQuery(parseInt(data.props.slug)));
 </script>
 
+<svelte:head>
+	{#await query then response}
+		<title>hkr.news | {response.item.title}</title>
+	{/await}
+</svelte:head>
+
 {#await query}
 	<p>Getting comments...</p>
 {:then response}
