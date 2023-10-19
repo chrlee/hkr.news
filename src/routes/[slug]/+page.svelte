@@ -3,8 +3,11 @@
 	import Post from '../../components/Post.svelte';
 
 	export let data;
-
-	const query = fetchData(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]], 40));
+	let query;
+	
+	$: {
+		query = fetchData(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]], 40));
+	};
 </script>
 
 {#await query}

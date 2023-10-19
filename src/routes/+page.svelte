@@ -27,6 +27,13 @@
 </div>
 
 <style>
+	a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Scada';
+		font-size: x-large;
+		font-weight: 400;
+	}
 	.homePage {
 		display: flex;
 		flex-direction: column;

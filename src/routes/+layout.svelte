@@ -31,10 +31,11 @@
 	}
 
 	.pageContent {
-		max-width: 100%;
+		width: 100%;
 		overflow: hidden;
 		padding: 1rem;
 		@media only screen and (min-width: 1024px) {
+			width: 80%;
 			padding: 0;
 		}
 	}
