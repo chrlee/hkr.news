@@ -1,14 +1,21 @@
 <script>
 	import Icon from '@iconify/svelte';
 	export let node;
+	const external = !!node.url;
+	const commentsUrl = `posts/${node.id}`;
 	const date = new Date(parseInt(node.time) * 1000);
 </script>
 
 <div class="item">
 	<div>
-		<a class="itemLink" href={node.url} target="_blank" rel="external nofollow noreferrer"
-			>{node.title}</a
+		<a
+			class="itemLink"
+			href={external ? node.url : commentsUrl}
+			target={external ? "_blank" : "_self"}
+			rel={external ? "external nofollow noreferrer" : ""}
 		>
+			{node.title}
+		</a>
 	</div>
 	<div class="itemInfo">
 		<p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>

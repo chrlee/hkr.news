@@ -1,7 +1,7 @@
 <script>
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
-	import Navbar from '../components/Navbar.svelte';
+	import Navbar from '../components/Navbar/Navbar.svelte';
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
@@ -31,7 +31,11 @@
 	}
 
 	.pageContent{
-		width: 100%;
+		max-width: 100%;
 		overflow: hidden;
+		padding: 1rem;
+		@media only screen and (min-width: 1024px) {
+			padding: 0;
+		}
 	}
 </style>

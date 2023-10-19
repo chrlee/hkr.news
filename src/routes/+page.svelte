@@ -16,7 +16,7 @@
 			{#await query}
 				<p class="loading">Getting the news...</p>
 			{:then response}
-				{#each response[pageType].edges as { node }}
+				{#each response[pageType].edges as { node } (node.id)}
 					{#if node}
 						<Post {node} />
 					{/if}

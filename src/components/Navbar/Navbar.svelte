@@ -1,16 +1,13 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import Header from './Header.svelte';
 </script>
-
-<svelte:head>
-	<title>hkr.news</title>
-</svelte:head>
 
 <nav>
 	<div class="menuButton">
 		<Icon icon="line-md:close-to-menu-transition" inline={true} width="1.5em" height="1.5em" />
 	</div>
-	<h1>hkr.news</h1>
+	<Header />	
 	<div class="filler" />
 </nav>
 

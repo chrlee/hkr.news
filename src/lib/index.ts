@@ -31,12 +31,17 @@ export const pageQuery = (pageType: [string, PageTypes][], first: number) => `qu
 export const itemQuery = (id: number) => `query {
         item(id: ${id}){
             id
-            deleted
-            children {
-                text
-            }
+            title
             url
             score
+            descendants
+            by
+            time
+            text
+            children {
+                id
+                text
+            }
         }
 }`;
 
