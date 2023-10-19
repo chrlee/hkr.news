@@ -2,8 +2,11 @@
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import Navbar from '../components/Navbar/NavBar.svelte';
+	import Seo from '../components/Seo/Seo.svelte';
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
+
+<Seo />
 
 <div class="pageWrapper">
 	<Navbar />
