@@ -11,8 +11,8 @@
 		<a
 			class="itemLink"
 			href={external ? node.url : commentsUrl}
-			target={external ? "_blank" : "_self"}
-			rel={external ? "external nofollow noreferrer" : ""}
+			target={external ? '_blank' : '_self'}
+			rel={external ? 'external nofollow noreferrer' : ''}
 		>
 			{node.title}
 		</a>
@@ -24,8 +24,8 @@
 		>
 		<p><Icon icon="memory:user" inline /> {node.by}</p>
 		{#if date}
-            <p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
-        {/if}
+			<p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
+		{/if}
 	</div>
 </div>
 

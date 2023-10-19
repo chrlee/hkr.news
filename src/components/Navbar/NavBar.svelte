@@ -1,18 +1,33 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import Header from './Header.svelte';
+	import NavMenu from './NavMenu.svelte';
 </script>
 
-<nav>
-	<div class="menuButton">
+<div class="navBar">
+	<button class="menuButton">
 		<Icon icon="line-md:close-to-menu-transition" inline={true} width="1.5em" height="1.5em" />
-	</div>
-	<Header />	
+	</button>
+	<Header />
+	<NavMenu />
 	<div class="filler" />
-</nav>
+</div>
 
 <style>
-	nav {
+	button,
+	button:focus {
+		outline: none;
+		background: transparent;
+		border: 1px solid transparent;
+		padding: 0;
+	}
+
+	button:active {
+		outline: none;
+		background: transparent;
+		border: 1px solid grey;
+	}
+	.navBar {
 		position: sticky;
 		top: 1.5rem;
 		display: flex;
@@ -24,17 +39,18 @@
 		@media only screen and (min-width: 1024px) {
 			flex-direction: column;
 			width: initial;
-			top: 1.3rem;
+			top: 1rem;
 		}
 	}
 
 	.menuButton {
+		cursor: pointer;
 		@media only screen and (min-width: 1024px) {
 			display: none;
 		}
 	}
 
 	.filler {
-		width: 1.5em;
+		width: 1.5rem;
 	}
 </style>
