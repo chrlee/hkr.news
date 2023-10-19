@@ -4,14 +4,14 @@
 
 	export let data;
 	let query;
-	
+
 	$: {
 		query = fetchData(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]], 40));
 	};
 </script>
 
 {#await query}
-	<p>Grabbing the news...</p>
+	<p>Getting the news...</p>
 {:then response}
 	{#each response[data.props.slug].edges as { node }}
 		<Post {node} />

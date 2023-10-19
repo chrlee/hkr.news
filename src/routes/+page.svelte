@@ -42,6 +42,7 @@
 	.pageSection {
 		display: flex;
 		flex-direction: column;
+		min-height: 20rem;
 	}
 
 	.pageSection > h2:first-child,
