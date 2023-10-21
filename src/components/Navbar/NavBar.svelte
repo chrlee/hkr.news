@@ -18,7 +18,7 @@
 	button:focus {
 		outline: none;
 		background: transparent;
-		border: 1px solid transparent;
+		border: 0;
 		padding: 0;
 	}
 
@@ -33,7 +33,7 @@
 		display: flex;
 		width: 100%;
 		height: auto;
-		padding: 0 1rem;
+		padding: 0 1.5rem;
 		justify-content: space-between;
 		align-self: flex-start;
 		@media only screen and (min-width: 1024px) {

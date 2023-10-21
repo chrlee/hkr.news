@@ -17,7 +17,10 @@
 
 <style>
 	@import './reset.css';
-
+	
+	:global(body) {
+		background-color: #fff9f5;
+	}
 	.pageWrapper {
 		display: flex;
 		flex-direction: column;
@@ -32,7 +35,6 @@
 			padding: 1rem;
 		}
 	}
-
 	.pageContent {
 		width: 100%;
 		overflow: hidden;

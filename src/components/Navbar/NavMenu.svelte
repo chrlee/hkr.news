@@ -13,7 +13,6 @@
 			</li>
 		{/each}
 		<li class="navFooter">
-			<Icon icon="ri:github-line" width="1.7rem" height="1.7rem"/>
 			<Icon icon="material-symbols:dark-mode-outline-rounded" width="1.7rem" height="1.7rem"/>
 		</li>
 	</ul>
@@ -50,7 +49,7 @@
 		width: 100%;
 		height: 100%;
         padding: 0.3rem 0.5rem;
-		border-radius: 0.5rem;
+		border-radius: 0.2rem;
 		text-decoration: none;
 		color: black;
 	}

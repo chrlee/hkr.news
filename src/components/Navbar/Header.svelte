@@ -14,6 +14,7 @@
 	h1 {
 		font-family: 'Scada';
 		font-size: x-large;
+		letter-spacing: 1px;
 		@media only screen and (min-width: 1024px) {
 			font-size: xxx-large;
 		}

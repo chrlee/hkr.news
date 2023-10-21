@@ -13,7 +13,10 @@
 	{#each Object.values(PageTypes) as pageType}
 		<section class="pageSection">
 			<h2 class="pageSectionHeader">
-				<a href={`/${pageType}`}>
+				<a
+					class="pageSectionHeaderLink"
+					href={`/${pageType}`}
+				>
 					{pageType}
 				</a>
 			</h2>
@@ -26,6 +29,12 @@
 					{/if}
 				{/each}
 			{/await}
+			<a
+				class="moreButton"
+				href={`/${pageType}`}
+			>
+				more >>
+			</a>
 		</section>
 	{/each}
 </div>
@@ -35,7 +44,6 @@
 		text-decoration: none;
 		color: black;
 		font-family: 'Scada';
-		font-size: x-large;
 		font-weight: 400;
 	}
 	.homePage {
@@ -48,13 +56,17 @@
 		flex-direction: column;
 		min-height: 21rem;
 	}
-
 	.pageSection > h2:first-child,
 	.loading {
 		grid-column: 1 / span 2;
 	}
-
 	.pageSectionHeader {
-		padding: 0.3rem;
+		padding: 0.5rem;
+	}
+	.pageSectionHeaderLink {
+		font-size: x-large;
+	}
+	.moreButton {
+		align-self: flex-end;
 	}
 </style>
