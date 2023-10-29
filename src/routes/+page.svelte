@@ -13,10 +13,7 @@
 	{#each Object.values(PageTypes) as pageType}
 		<section class="pageSection">
 			<h2 class="pageSectionHeader">
-				<a
-					class="pageSectionHeaderLink"
-					href={`/${pageType}`}
-				>
+				<a class="pageSectionHeaderLink" href={`/${pageType}`}>
 					{pageType}
 				</a>
 			</h2>
@@ -29,12 +26,7 @@
 					{/if}
 				{/each}
 			{/await}
-			<a
-				class="moreButton"
-				href={`/${pageType}`}
-			>
-				more >>
-			</a>
+			<a class="moreButton" href={`/${pageType}`}> more >> </a>
 		</section>
 	{/each}
 </div>
@@ -42,7 +34,6 @@
 <style>
 	a {
 		text-decoration: none;
-		color: black;
 		font-family: 'Scada';
 		font-weight: 400;
 	}

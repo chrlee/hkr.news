@@ -6,8 +6,8 @@
 
 <header>
 	<h1>
-        <a href="/">hkr.news</a>
-    </h1>
+		<a href="/">hkr.news</a>
+	</h1>
 </header>
 
 <style>
@@ -22,6 +22,5 @@
 
 	a {
 		text-decoration: none;
-		color: black;
 	}
 </style>

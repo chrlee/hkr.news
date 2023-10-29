@@ -7,7 +7,7 @@
 
 	$: {
 		query = fetchData(pageQuery([[data.props.slug.toUpperCase(), data.props.slug]], 40));
-	};
+	}
 </script>
 
 <svelte:head>

@@ -1,6 +1,10 @@
 <script>
 	import { PageTypes } from '$lib';
 	import Icon from '@iconify/svelte';
+
+	const toggleDarkMode = () => {
+		document.documentElement.classList.toggle('dark');
+	};
 </script>
 
 <nav>
@@ -13,7 +17,14 @@
 			</li>
 		{/each}
 		<li class="navFooter">
-			<Icon icon="material-symbols:dark-mode-outline-rounded" width="1.7rem" height="1.7rem"/>
+			<button on:click={toggleDarkMode}>
+				<Icon
+					icon="material-symbols:dark-mode-outline-rounded"
+					width="1.7rem"
+					height="1.7rem"
+					on:click={toggleDarkMode}
+				/>
+			</button>
 		</li>
 	</ul>
 </nav>
@@ -36,22 +47,20 @@
 
 	.navItem {
 		width: 100%;
-        height: 100%;
-		
+		height: 100%;
 	}
 
-    a:hover {
-        background-color: antiquewhite;
-    }
+	a:hover {
+		background-color: antiquewhite;
+	}
 
 	a {
-        display: inline-block;
+		display: inline-block;
 		width: 100%;
 		height: 100%;
-        padding: 0.3rem 0.5rem;
+		padding: 0.3rem 0.5rem;
 		border-radius: 0.2rem;
 		text-decoration: none;
-		color: black;
 	}
 
 	.navItemText {

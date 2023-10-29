@@ -10,7 +10,7 @@
 
 <svelte:head>
 	{#await query then response}
-		<title>hkr.news | {response.item.title}</title>
+		<title>{response.item.title} | hkr.news</title>
 	{/await}
 </svelte:head>
 

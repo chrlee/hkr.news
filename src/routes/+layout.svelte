@@ -10,17 +10,16 @@
 
 <div class="pageWrapper">
 	<Navbar />
-	<div class="pageContent">
+	<main class="pageContent">
 		<slot />
-	</div>
+	</main>
 </div>
 
 <style>
-	@import './reset.css';
-	
-	:global(body) {
-		background-color: #fff9f5;
-	}
+	@import '../styles/reset.css';
+	@import '../styles/theme.css';
+  @import '../styles/global.css';
+
 	.pageWrapper {
 		display: flex;
 		flex-direction: column;

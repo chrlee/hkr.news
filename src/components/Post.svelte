@@ -5,6 +5,7 @@
 	const commentsUrl = `posts/${node.id}`;
 	const date = new Date(parseInt(node.time) * 1000);
 </script>
+
 <div class="post">
 	<div class="info">
 		<div>
@@ -34,15 +35,16 @@
 			target={external ? '_blank' : '_self'}
 			rel={external ? 'external nofollow noreferrer' : ''}
 		>
-			({external ? new URL(node.url).hostname : "hkr.news"})
+			({external ? new URL(node.url).hostname : 'hkr.news'})
 		</a>
 	</div>
 </div>
+
 <style>
 	a {
 		text-decoration: none;
 	}
-	.post{
+	.post {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
@@ -50,9 +52,9 @@
 		border-radius: 0.2rem;
 	}
 	.post:hover {
-		background-color: antiquewhite;
+		background-color: var(--secondary-color);
 	}
-	.info{
+	.info {
 		display: flex;
 		flex-direction: column;
 		min-height: max-content;
@@ -61,5 +63,4 @@
 		display: flex;
 		gap: 1rem;
 	}
-	
 </style>

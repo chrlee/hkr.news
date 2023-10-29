@@ -14,19 +14,6 @@
 </div>
 
 <style>
-	button,
-	button:focus {
-		outline: none;
-		background: transparent;
-		border: 0;
-		padding: 0;
-	}
-
-	button:active {
-		outline: none;
-		background: transparent;
-		border: 1px solid grey;
-	}
 	.navBar {
 		position: sticky;
 		top: 1.5rem;
