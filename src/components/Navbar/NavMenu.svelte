@@ -50,10 +50,6 @@
 		height: 100%;
 	}
 
-	a:hover {
-		background-color: antiquewhite;
-	}
-
 	a {
 		display: inline-block;
 		width: 100%;
