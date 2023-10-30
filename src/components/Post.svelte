@@ -1,8 +1,10 @@
 <script>
+  import { timeAgo } from '$lib/time';
 	import Icon from '@iconify/svelte';
 	export let node;
 	const external = !!node.url;
 	const commentsUrl = `posts/${node.id}`;
+  const url = new URL(external ? node.url : window.location.host + commentsUrl);
 	const date = new Date(parseInt(node.time) * 1000);
 </script>
 
@@ -11,7 +13,7 @@
 		<div>
 			<a
 				class="itemLink"
-				href={external ? node.url : commentsUrl}
+				href={url}
 				target={external ? '_blank' : '_self'}
 				rel={external ? 'external nofollow noreferrer' : ''}
 			>
@@ -20,23 +22,24 @@
 		</div>
 		<div class="itemInfo">
 			<p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>
-			<a href={`posts/${node.id}`} rel="noindex"
+			<a href={commentsUrl} rel="noindex"
 				><Icon icon="pixelarticons:comment" inline /> {node.descendants}</a
 			>
 			<p><Icon icon="memory:user" inline /> {node.by}</p>
 			{#if date}
-				<p>{`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}</p>
+				<p>{timeAgo(date)}</p>
 			{/if}
 		</div>
 	</div>
 	<div class="linkPreview">
 		<a
-			href={external ? node.url : commentsUrl}
+			href={url}
 			target={external ? '_blank' : '_self'}
 			rel={external ? 'external nofollow noreferrer' : ''}
 		>
-			({external ? new URL(node.url).hostname : 'hkr.news'})
+			<img src={external ? `https://s2.googleusercontent.com/s2/favicons?domain=${new URL(url).hostname}&sz=20` : '/favicon.ico'} width="20" height="20" alt={url.hostname}/>
 		</a>
+    
 	</div>
 </div>
 
@@ -52,7 +55,7 @@
 		border-radius: 0.2rem;
 	}
 	.post:hover {
-		background-color: var(--secondary-color);
+		background-color: var(--tertiary-color);
 	}
 	.info {
 		display: flex;
@@ -63,4 +66,7 @@
 		display: flex;
 		gap: 1rem;
 	}
+  .linkPreview {
+    text-align: right;
+  }
 </style>

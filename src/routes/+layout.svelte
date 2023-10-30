@@ -1,3 +1,9 @@
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+</svelte:head>
+
 <script>
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
@@ -25,22 +31,20 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		gap: 1rem;
 		@media only screen and (min-width: 1024px) {
 			flex-direction: row;
 			justify-content: center;
 			align-items: flex-start;
-			gap: 2rem;
-			padding: 1rem;
 		}
 	}
 	.pageContent {
 		width: 100%;
 		overflow: hidden;
 		padding: 1rem;
+    flex-grow: 1;
+    background-color: var(--secondary-color);
 		@media only screen and (min-width: 1024px) {
 			width: 80%;
-			padding: 0;
 		}
 	}
 </style>

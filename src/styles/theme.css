@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&family=Scada&display=swap');
+
 :root {
 	--primary-color: #ff6600;
-	--secondary-color: #ffe0cc;
-	--tertiary-color: #0000ff;
+  --secondary-color: #fff0e5;
+	--tertiary-color: #ffe0cc;
 	--quaternary-color: #ffff00;
 	--bg-color: #fff9f5;
 	--text-color: #1a0a00;
 }
 
 .dark {
-	--primary-color: #ff0000;
-	--secondary-color: #424242;
-	--tertiary-color: #0000ff;
+	--primary-color: #ff6600;
+	--secondary-color: #181818;
+	--tertiary-color: #424242; 
 	--quaternary-color: #ffff00;
 	--bg-color: #121212;
 	--text-color: ##fff9f5;
@@ -19,6 +21,11 @@
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Scada', sans-serif;
 }
 
 a {
@@ -38,5 +45,5 @@ button:hover {
 }
 
 .navItem:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
 }

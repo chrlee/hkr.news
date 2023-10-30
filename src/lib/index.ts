@@ -46,6 +46,12 @@ export const itemQuery = (id: number) => `query {
 }`;
 
 export const fetchData = (query: string) =>
-	fetch(PUBLIC_HOSTED_URL + query)
+	fetch(PUBLIC_HOSTED_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ query })
+  })
 		.then((res) => res.json())
 		.then((out) => out.data);

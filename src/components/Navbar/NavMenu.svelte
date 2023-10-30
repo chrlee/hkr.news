@@ -62,7 +62,6 @@
 	.navItemText {
 		float: right;
 		font-size: x-large;
-		font-family: 'Scada';
 	}
 
 	.navFooter {

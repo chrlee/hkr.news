@@ -18,6 +18,7 @@
 		position: sticky;
 		top: 1.5rem;
 		display: flex;
+    flex-grow: 1;
 		width: 100%;
 		height: auto;
 		padding: 0 1.5rem;

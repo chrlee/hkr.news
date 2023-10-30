@@ -31,12 +31,7 @@
 	{/each}
 </div>
 
-<style>
-	a {
-		text-decoration: none;
-		font-family: 'Scada';
-		font-weight: 400;
-	}
+<style>	
 	.homePage {
 		display: flex;
 		flex-direction: column;
