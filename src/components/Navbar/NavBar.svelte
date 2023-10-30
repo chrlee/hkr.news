@@ -16,18 +16,17 @@
 <style>
 	.navBar {
 		position: sticky;
-		top: 1.5rem;
+		top: 0;
 		display: flex;
-    flex-grow: 1;
 		width: 100%;
 		height: auto;
-		padding: 0 1.5rem;
+		padding: 1.5rem;
+    background-color: var(--bg-color);
 		justify-content: space-between;
 		align-self: flex-start;
 		@media only screen and (min-width: 1024px) {
 			flex-direction: column;
-			width: initial;
-			top: 1rem;
+			width: initial; 
 		}
 	}
 

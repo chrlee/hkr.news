@@ -6,7 +6,7 @@
 	--tertiary-color: #ffe0cc;
 	--quaternary-color: #ffff00;
 	--bg-color: #fff9f5;
-	--text-color: #1a0a00;
+	--text-color: #331400;
 }
 
 .dark {
@@ -15,7 +15,7 @@
 	--tertiary-color: #424242; 
 	--quaternary-color: #ffff00;
 	--bg-color: #121212;
-	--text-color: ##fff9f5;
+	--text-color: ##ffe0cc;
 }
 
 body {

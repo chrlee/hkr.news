@@ -21,13 +21,13 @@
 			</a>
 		</div>
 		<div class="itemInfo">
-			<p><Icon icon="ic:baseline-plus" inline /> {node.score}</p>
+			<p><Icon icon="tabler:plus" inline /> {node.score}</p>
 			<a href={commentsUrl} rel="noindex"
-				><Icon icon="pixelarticons:comment" inline /> {node.descendants}</a
+				><Icon icon="tabler:message" inline /> {node.descendants}</a
 			>
-			<p><Icon icon="memory:user" inline /> {node.by}</p>
+			<p><Icon icon="tabler:user" inline /> {node.by}</p>
 			{#if date}
-				<p>{timeAgo(date)}</p>
+        <p><Icon icon="tabler:clock" inline /> {timeAgo(date)}</p>
 			{/if}
 		</div>
 	</div>
@@ -44,8 +44,8 @@
 </div>
 
 <style>
-	a {
-		text-decoration: none;
+	img {
+    min-width: 20px;
 	}
 	.post {
 		display: flex;
@@ -53,9 +53,13 @@
 		justify-content: space-between;
 		padding: 0.5rem;
 		border-radius: 0.2rem;
+    gap: 0.2rem; 
+    transition: transform ease 0.5s, box-shadow ease 0.5s;
 	}
 	.post:hover {
 		background-color: var(--tertiary-color);
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
 	}
 	.info {
 		display: flex;

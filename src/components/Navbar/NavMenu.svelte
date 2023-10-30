@@ -2,7 +2,9 @@
 	import { PageTypes } from '$lib';
 	import Icon from '@iconify/svelte';
 
+  $: darkMode = document.documentElement.classList.contains('dark');
 	const toggleDarkMode = () => {
+    darkMode = !darkMode;
 		document.documentElement.classList.toggle('dark');
 	};
 </script>
@@ -19,10 +21,9 @@
 		<li class="navFooter">
 			<button on:click={toggleDarkMode}>
 				<Icon
-					icon="material-symbols:dark-mode-outline-rounded"
+					icon={`tabler:sun${darkMode ? '' : '-off'}`}
 					width="1.7rem"
 					height="1.7rem"
-					on:click={toggleDarkMode}
 				/>
 			</button>
 		</li>
