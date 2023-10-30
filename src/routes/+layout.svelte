@@ -39,6 +39,7 @@
 	}
 	.pageContent {
 		width: 100%;
+    min-height: 100vh;
 		overflow: hidden;
 		padding: 1rem;
     flex-grow: 1;

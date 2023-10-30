@@ -3,8 +3,8 @@
 	import Icon from '@iconify/svelte';
 	export let node;
 	const external = !!node.url;
-	const commentsUrl = `posts/${node.id}`;
-  const url = new URL(external ? node.url : window.location.host + commentsUrl);
+	const commentsUrl = `/posts/${node.id}`; 
+  const url = new URL(external ? node.url : `${location.protocol}//${location.host}${commentsUrl}`);
 	const date = new Date(parseInt(node.time) * 1000);
 </script>
 
