@@ -41,11 +41,12 @@
 		width: 100%;
     min-height: 100vh;
 		overflow: hidden;
-		padding: 1rem;
+		padding: 0.5rem;
     flex-grow: 1;
     background-color: var(--secondary-color);
 		@media only screen and (min-width: 1024px) {
 			width: 80%;
+      padding: 1rem;
 		}
 	}
 </style>

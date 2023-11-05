@@ -35,7 +35,9 @@
 	.homePage {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+    @media only screen and (min-width: 1024px) {
+      gap: 0.5rem;
+    }
 	}
 	.pageSection {
 		display: flex;
@@ -47,10 +49,16 @@
 		grid-column: 1 / span 2;
 	}
 	.pageSectionHeader {
-		padding: 0.5rem;
+    padding: 0 0.5rem;
+    @media only screen and (min-width: 1024px) {
+      padding: 0.5rem;
+    }
 	}
 	.pageSectionHeaderLink {
-		font-size: x-large;
+    font-size: large;
+    @media only screen and (min-width: 1024px) {
+      font-size: x-large;
+    }
 	}
 	.moreButton {
 		align-self: flex-end;

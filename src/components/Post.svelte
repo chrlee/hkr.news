@@ -58,8 +58,7 @@
 	}
 	.post:hover {
 		background-color: var(--tertiary-color);
-    transform: translateY(-1px);
-    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px 0px var(--box-shadow-color);
 	}
 	.info {
 		display: flex;
@@ -68,7 +67,8 @@
 	}
 	.itemInfo {
 		display: flex;
-		gap: 1rem;
+		gap: 0 1rem;
+    flex-wrap: wrap;
 	}
   .linkPreview {
     text-align: right;

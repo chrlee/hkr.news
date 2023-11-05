@@ -1,12 +1,5 @@
 <script>
 	import { PageTypes } from '$lib';
-	import Icon from '@iconify/svelte';
-
-  $: darkMode = document.documentElement.classList.contains('dark');
-	const toggleDarkMode = () => {
-    darkMode = !darkMode;
-		document.documentElement.classList.toggle('dark');
-	};
 </script>
 
 <nav>
@@ -18,56 +11,34 @@
 				</a>
 			</li>
 		{/each}
-		<li class="navFooter">
-			<button on:click={toggleDarkMode}>
-				<Icon
-					icon={`tabler:sun${darkMode ? '' : '-off'}`}
-					width="1.7rem"
-					height="1.7rem"
-				/>
-			</button>
-		</li>
 	</ul>
 </nav>
 
 <style>
-	nav {
-		@media only screen and (max-width: 1024px) {
-			display: none;
-		}
-	}
-
 	ul {
 		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
+		flex-direction: row;
+		gap: 0.5rem;
 		list-style-type: none;
-		padding: 0;
+		padding: 0.25rem;
 		align-items: end;
+    margin: 0;
+    @media only screen and (min-width: 1024px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 	}
 
 	.navItem {
 		width: 100%;
 		height: 100%;
-	}
-
-	a {
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-		padding: 0.3rem 0.5rem;
-		border-radius: 0.2rem;
-		text-decoration: none;
+    transition: transform ease 0.5s, box-shadow ease 0.5s;
 	}
 
 	.navItemText {
-		float: right;
-		font-size: x-large;
-	}
-
-	.navFooter {
-		display: flex;
-		gap: 0.2rem;
-		padding: 0.3rem 0.5rem;
+    @media only screen and (min-width: 1024px) {
+      float: right;
+      font-size: x-large;
+    }
 	}
 </style>

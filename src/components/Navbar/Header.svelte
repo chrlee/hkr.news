@@ -5,6 +5,10 @@
 </header>
 
 <style>
+  header {
+    display: flex;
+    align-items: center;
+  }
 	h1 {
 		font-size: x-large;
 		letter-spacing: 1px;

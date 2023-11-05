@@ -1,16 +1,13 @@
 <script>
-	import Icon from '@iconify/svelte';
 	import Header from './Header.svelte';
 	import NavMenu from './NavMenu.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
 <div class="navBar">
-	<button class="menuButton">
-		<Icon icon="line-md:close-to-menu-transition" inline={true} width="1.5em" height="1.5em" />
-	</button>
 	<Header />
 	<NavMenu />
-	<div class="filler" />
+  <ThemeToggle />
 </div>
 
 <style>
@@ -18,26 +15,18 @@
 		position: sticky;
 		top: 0;
 		display: flex;
+    gap: 1rem;
 		width: 100%;
 		height: auto;
-		padding: 1.5rem;
     background-color: var(--bg-color);
 		justify-content: space-between;
-		align-self: flex-start;
+    align-items: center;
+    padding: 0 1rem;
 		@media only screen and (min-width: 1024px) {
 			flex-direction: column;
 			width: initial; 
+      padding: 1.5rem;
+      align-items: flex-end;
 		}
-	}
-
-	.menuButton {
-		cursor: pointer;
-		@media only screen and (min-width: 1024px) {
-			display: none;
-		}
-	}
-
-	.filler {
-		width: 1.5rem;
 	}
 </style>
