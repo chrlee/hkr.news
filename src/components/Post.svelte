@@ -21,11 +21,11 @@
 			</a>
 		</div>
 		<div class="itemInfo">
-			<p><Icon icon="tabler:plus" inline /> {node.score}</p>
+			<p><Icon icon="tabler:plus" inline />{node.score}</p>
 			<a href={commentsUrl} rel="noindex"
 				><Icon icon="tabler:message" inline /> {node.descendants}</a
 			>
-			<p><Icon icon="tabler:user" inline /> {node.by}</p>
+			<p><Icon icon="tabler:user" inline />{node.by}</p>
 			{#if date}
         <p><Icon icon="tabler:clock" inline /> {timeAgo(date)}</p>
 			{/if}
@@ -60,16 +60,34 @@
 		background-color: var(--tertiary-color);
     box-shadow: 1px 1px 3px 0px var(--box-shadow-color);
 	}
+  .itemLink {
+    font-size: medium;
+    @media only screen and (min-width: 1024px) {
+      font-size: large;
+    }
+  }
 	.info {
 		display: flex;
 		flex-direction: column;
 		min-height: max-content;
 	}
-	.itemInfo {
+  .itemInfo {
 		display: flex;
-		gap: 0 1rem;
+    color: var(--quaternary-color);
     flex-wrap: wrap;
+		gap: 0 0.5rem;
+    font-size: small;
+    @media only screen and (min-width: 1024px) {
+      gap: 0 1rem;
+      font-size: medium;
+    }
 	}
+  .itemInfo a {
+    color: var(--quaternary-color);
+  }
+  .itemInfo a:hover {
+    color: var(--primary-color);
+  }
   .linkPreview {
     text-align: right;
   }

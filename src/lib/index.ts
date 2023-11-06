@@ -38,9 +38,14 @@ export const itemQuery = (id: number) => `query {
             by
             time
             text
+            dead
             children {
                 id
                 text
+                by
+                time
+                dead
+                deleted
             }
         }
 }`;

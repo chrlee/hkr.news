@@ -1,6 +1,7 @@
 <script>
 	import { PageTypes, fetchData, pageQuery } from '$lib';
 	import Post from '../components/Post.svelte';
+  import Loading from '../components/Loading.svelte';
 
 	const query = fetchData(pageQuery(Object.entries(PageTypes), 5));
 </script>
@@ -18,10 +19,10 @@
 				</a>
 			</h2>
 			{#await query}
-				<p class="loading">Getting the news...</p>
+        <Loading />
 			{:then response}
 				{#each response[pageType].edges as { node } (node.id)}
-					{#if node}
+					{#if !node.dead && !node.deleted}
 						<Post {node} />
 					{/if}
 				{/each}
@@ -44,8 +45,7 @@
 		flex-direction: column;
 		min-height: 21rem;
 	}
-	.pageSection > h2:first-child,
-	.loading {
+	.pageSection > h2:first-child {
 		grid-column: 1 / span 2;
 	}
 	.pageSectionHeader {
