@@ -1,7 +1,7 @@
 <script>
 	import { PageTypes, fetchData, pageQuery } from '$lib';
 	import Post from '../components/Post.svelte';
-  import Loading from '../components/Loading.svelte';
+	import PostSkeleton from '../components/PostSkeleton.svelte';
 
 	const query = fetchData(pageQuery(Object.entries(PageTypes), 5));
 </script>
@@ -19,7 +19,9 @@
 				</a>
 			</h2>
 			{#await query}
-        <Loading />
+				{#each Array(5) as _}
+			    	<PostSkeleton />
+				{/each}
 			{:then response}
 				{#each response[pageType].edges as { node } (node.id)}
 					{#if !node.dead && !node.deleted}

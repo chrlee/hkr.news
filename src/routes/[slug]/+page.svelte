@@ -1,7 +1,7 @@
 <script>
 	import { fetchData, pageQuery } from '$lib';
-	import Loading from '../../components/Loading.svelte';
 	import Post from '../../components/Post.svelte';
+	import PostSkeleton from '../../components/PostSkeleton.svelte';
 
 	export let data;
 	let query;
@@ -16,7 +16,9 @@
 </svelte:head>
 
 {#await query}
-  <Loading />
+	{#each Array(40) as _}
+		<PostSkeleton />
+	{/each}
 {:then response}
 	{#each response[data.props.slug].edges as { node }}
     {#if !node.dead && !node.deleted}

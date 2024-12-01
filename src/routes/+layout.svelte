@@ -39,13 +39,14 @@
 	}
 	.pageContent {
 		width: 100%;
-    min-height: 100vh;
+		min-height: 100vh;
 		overflow: hidden;
-    flex-grow: 1;
-    background-color: var(--secondary-color);
+		flex-grow: 1;
+		background-color: var(--secondary-color);
+		padding: 0.5rem;
 		@media only screen and (min-width: 1024px) {
 			width: 80%;
-      padding: 1rem;
+			padding: 1rem;
 		}
 	}
 </style>

@@ -3,7 +3,7 @@
 	import Icon from '@iconify/svelte';
 	export let node;
 	const external = !!node.url;
-	const commentsUrl = `/posts/${node.id}`; 
+	const commentsUrl = `/posts/${node.id}`;
   const url = new URL(external ? node.url : `${location.protocol}//${location.host}${commentsUrl}`);
 	const date = new Date(parseInt(node.time) * 1000);
 </script>
@@ -44,33 +44,35 @@
 </div>
 
 <style>
-	img {
-    min-width: 20px;
-	}
 	.post {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		padding: 0.5rem;
 		border-radius: 0.2rem;
-    gap: 0.2rem; 
-    transition: transform ease 0.5s, box-shadow ease 0.5s;
+		gap: 0.2rem; 
+		transition: transform ease 0.5s, box-shadow ease 0.5s;
 	}
 	.post:hover {
 		background-color: var(--tertiary-color);
-    box-shadow: 1px 1px 3px 0px var(--box-shadow-color);
+		box-shadow: 1px 1px 3px 0px var(--box-shadow-color);
 	}
   .itemLink {
-    font-size: medium;
-    @media only screen and (min-width: 1024px) {
-      font-size: large;
-    }
+		font-size: medium;
+		@media only screen and (min-width: 1024px) {
+		font-size: large;
+		}
   }
 	.info {
 		display: flex;
 		flex-direction: column;
 		min-height: max-content;
 	}
+	.info > div:first-child {
+		display: flex;
+	align-items: center;
+		gap: 0.5rem;
+  }
   .itemInfo {
 		display: flex;
     color: var(--quaternary-color);
@@ -90,5 +92,11 @@
   }
   .linkPreview {
     text-align: right;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .linkPreview img {
+    display: block;
+    min-width: 20px;
   }
 </style>

@@ -7,7 +7,7 @@
 <div class="navBar">
 	<Header />
 	<NavMenu />
-  <ThemeToggle />
+	<ThemeToggle />
 </div>
 
 <style>
@@ -15,19 +15,19 @@
 		position: sticky;
 		top: 0;
 		display: flex;
-    gap: 0.5rem;
+		gap: 0.5rem;
 		width: 100%;
 		height: auto;
-    background-color: var(--bg-color);
+		background-color: var(--bg-color);
 		justify-content: space-between;
-    align-items: center;
-    padding: 0 0.5rem;
+		align-items: center;
+		padding: 0.5rem 1rem;
 		@media only screen and (min-width: 1024px) {
 			flex-direction: column;
 			width: initial; 
-      padding: 1.5rem;
-      align-items: flex-end;
-      gap: 1rem;
+			padding: 1.5rem;
+			align-items: flex-end;
+			gap: 1rem;
 		}
 	}
 </style>
